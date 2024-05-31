@@ -1,5 +1,5 @@
 import express from 'express';
-import{check, validationResult} from 'express-validator/check';
+import{check, validationResult} from 'express-validator';
 
 
 // port
@@ -23,9 +23,9 @@ app.post('/form',[
         .isEmail()
         .withMessage('Invalid Email Address'),
     check('password')
-        .isLenght({min:8})
+        .isLength({min:8})
         .withMessage('Password must be at least 8 characters')
-        .isLenght({mas:32})
+        .isLength({mas:32})
         .withMessage('Password must be atmost 32 characters')
         //custom method=> to check if the password and the confirmPass are the same
         .custom((password, {req})=>{
