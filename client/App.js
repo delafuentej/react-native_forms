@@ -92,14 +92,7 @@ export default function App() {
       <View style={styles.space}>
         <Text h1>Formal</Text>
 
-        <>
-    <Text style={styles.space}>Username</Text>
-    <Input placeholder="Username" {...formal.getFieldProps('Username')} />
-    {formal.errors.Username && (
-      <Text style={[styles.space, formal.errors.Username && styles.error]}>{formal.errors.Username}</Text>
-    )}
-</>
-    
+
           <Field {...formal.getFieldProps('Username')} placeholder='Username' />
           <Field {...formal.getFieldProps('Email')} placeholder='Email' />
           <Field 
