@@ -43,6 +43,7 @@ app.post('/form',[
         return res.status(422).json({errors: errors.array()})
     }// whent there are no errors, it takes 'username', 'email' and 'password' and create the user and send a message success back to the client
     const {username, email, password} = req.body;
+    console.log(username, email)
     //todo create a  user with the above data
     res.json({success:true, message:'User created successfully', user: {username, email}});
 },
@@ -50,5 +51,5 @@ app.post('/form',[
 )
 
 app.listen(PORT, ()=>{
-    console.log(`Server running on PORT: ${PORT}`)
+    console.log(`Server running on PORT: http://localhost:${PORT}/form`)
 });
