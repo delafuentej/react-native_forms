@@ -4,7 +4,7 @@ import{check, validationResult} from 'express-validator';
 
 // port
 
-const PORT=3030;
+const PORT=process.env.PORT;
 //to initiate express
 const app= express();
 //middelware=> middleware functions have access to the req/ res object and the next function in the apps request-response cycle
