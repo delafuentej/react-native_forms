@@ -52,6 +52,7 @@ const Field=({placeholder, error,...props})=>(
   
     );
 
+  const URI= process.env.URI;
 
 export default function App() {
   //useFormal hook wich takes in initialValues and a config object(wich contains the initial schema, wich makes sure the data that we have conforms with the schema)
@@ -64,7 +65,7 @@ export default function App() {
       const email= values['Email']
       const password= values['Password']
       const confirmPassword= values['Confirm Password']
-      fetch('http://localhost:3030/form', {
+      fetch(URI, {
         method: 'POST',
         headers:{
           Accept:'application/json',
